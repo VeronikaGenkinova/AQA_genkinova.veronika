@@ -1,4 +1,4 @@
-import org.hillel.Calculator;
+import org.hillel.calculator.Calculator;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;

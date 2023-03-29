@@ -1,4 +1,4 @@
-package org.hillel;
+package org.hillel.calculator;
 
 public class Calculator {
 
