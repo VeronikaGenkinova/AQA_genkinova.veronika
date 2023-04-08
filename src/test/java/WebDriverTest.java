@@ -1,7 +1,4 @@
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,7 +10,7 @@ public class WebDriverTest {
     private static WebDriver webDriver;
 
     @BeforeAll
-    public static void beforeEachTest() {
+    public static void beforeAllTests() {
 
         System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
         System.setProperty("webdriver.http.factory", "jdk-http-client");
@@ -59,4 +56,10 @@ public class WebDriverTest {
         Assertions.assertTrue(emptyCartText.isDisplayed());
         Assertions.assertEquals(emptyCartText.getText(), expectedEmptyCartText, "Empty cart page contains notification");
     }
+
+    @AfterAll
+    public static void afterAllTests() {
+        webDriver.quit();
+    }
+
 }
