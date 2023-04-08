@@ -61,5 +61,4 @@ public class WebDriverTest {
     public static void afterAllTests() {
         webDriver.quit();
     }
-
 }
